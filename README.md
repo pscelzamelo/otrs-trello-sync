@@ -1,16 +1,17 @@
-# Node Chat Example
+# OTRS Trello Sync
 
-Chat example to showcase how to use `socket.io` with a static `express` server.
+## About this app
+
+This app was made as a proof of concept on rendering OTRS tickets on a Kanban board. It serves unidirectional synchrony from OTRS to Trello. The app is still in development and is not recommended for production use - yet!
 
 ## Setup
 
+The app requires node installed, then:
+
     $ npm install
 
-## Running the server
+Set your Trello and OTRS environment variables at config.js then:
 
-    $ node server.js
-       info  - socket.io started
-    Chat server listening at 0.0.0.0:3000
-
-Once the server is running, open `http://localhost:3000` in your browser. As you enter your name, watch the Users list
-(on the left) update. Once you press Enter or Send, the message is shared with all connected clients.
+    $ npm start
+    
+The app finds Queues and Boards with same names and sync the tickets!
